@@ -1,0 +1,31 @@
+[project]
+name = "kindle-to-md"
+version = "0.1.0"
+description = "Automated Kindle PDF to structured Markdown pipeline with AI distillation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pdfplumber>=0.10.0",
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "pydantic>=2.0.0",
+    "google-api-python-client>=2.0.0",
+    "google-auth-httplib2>=0.1.0",
+    "google-auth-oauthlib>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[project.scripts]
+kindle2md = "src.cli.commands:app"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]

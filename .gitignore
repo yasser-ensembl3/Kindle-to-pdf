@@ -1,0 +1,15 @@
+# Credentials
+credentials.json
+token.json
+
+# Virtual environment
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+kindle_to_md.egg-info/
+
+# OS
+.DS_Store
